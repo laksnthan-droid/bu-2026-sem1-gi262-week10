@@ -1,4 +1,4 @@
-using System;
+    using System;
 
 namespace MidtermExam.Prob03
 {
@@ -14,10 +14,22 @@ namespace MidtermExam.Prob03
         /// - root node มี child node ซ้ายและขวาอย่างละหนึ่งโหนด คืน 3
         /// - root node (ไม่มี child node ใดๆ) คืน 1
         /// </remarks>
-        public int AS03_CountTotalNode(Node root)
+
+    }
+ 
+namespace MidtermExam.Prob03
+    {
+        public class TreeCounter
         {
-            // TODO: เขียนคำตอบแทนคำสั่ง throw ด้านล่าง
-            throw new NotImplementedException();
+            public int AS03_CountTotalNode(Node root)
+            {
+                if (root == null)
+                {
+                    return 0;
+                }
+                return 1 + AS03_CountTotalNode(root.left) + AS03_CountTotalNode(root.right);
+            }
         }
     }
+}
 }
